@@ -126,9 +126,11 @@ segmentation performance with TotalSegmentator — underscoring their clinical u
     <h2 class="title is-3 has-text-centered">Methodology</h2>
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <img src="./static/images/framework.png" alt="2S-CEDiff Framework">
+        <img src="./static/images/MODEL.png" alt="2S-CEDiff Framework">
         <p>
-          簡短描述你的兩階段架構：第一階段處理切片生成，第二階段進行 3D 空間的一致性優化。
+          Figure 1. Overview of our proposed framework. Stage 1 consists of a 2.5D conditional diffusion model that generates contrast-enhanced
+slices from non-contrast inputs with cross-slice awareness. Stage 2 refines the generated volume using a lightweight 3D U-Net to improve
+inter-slice consistency and structural coherence.
         </p>
       </div>
     </div>
@@ -137,13 +139,29 @@ segmentation performance with TotalSegmentator — underscoring their clinical u
 
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Experiment Results</h2>
+    <h2 class="title is-3 has-text-centered">Experimental Results</h2>
+    
     <div class="columns is-centered">
-      <div class="column is-full-width">
-        <img src="./static/images/framework.png" alt="2S-CEDiff Experiment">
-        <p>
-          簡短描述你的兩階段架構：第一階段處理切片生成，第二階段進行 3D 空間的一致性優化。
-        </p>
+      <div class="column is-full-width has-text-centered">
+        
+        <div class="content">
+          <img src="./static/images/PSNRSSIM.png" alt="Quantitative Results 1" style="width: 100%;">
+          <p class="is-size-6" style="margin-top: 10px;">
+            Table 1. Quantitative Results (PSNR ↑, SSIM ↑) on HeartCT, Coltea-Lung-CT-100W, and BraTS2021 Datasets.
+          </p>
+        </div>
+
+        <br>
+
+        <div class="content">
+          <img src="./static/images/DICESCORE.png" alt="Quantitative Results 2" style="width: 100%;">
+          <p class="is-size-6" style="margin-top: 10px;">
+            Table 2. Segmentation Dice Scores on HeartCT. TotalSegmentator-derived Dice scores (↑) for seven cardiac structures comparing
+synthesized images against ground truth CECT. The table also reports average gain compared to native (NCCT) input..
+
+          </p>
+        </div>
+
       </div>
     </div>
   </div>
@@ -154,9 +172,10 @@ segmentation performance with TotalSegmentator — underscoring their clinical u
     <h2 class="title is-3 has-text-centered">Visualization</h2>
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <img src="./static/images/framework.png" alt="2S-CEDiff Visualization">
+        <img src="./static/images/VISUALIZE.png" alt="2S-CEDiff Visualization">
         <p>
-          簡短描述你的兩階段架構：第一階段處理切片生成，第二階段進行 3D 空間的一致性優化。
+          Figure 2. Visual comparison of synthesized contrast-enhanced CT images across methods. Each row shows a representative patient slice
+(Rows 1-2: HeartCT; Row 3: Coltea-Lung-CT-100W; Row 4: BraTS2021).
         </p>
       </div>
     </div>
